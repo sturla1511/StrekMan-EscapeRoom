@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="escapeRoom.css">
+    <style>
+      #BevistLos {display: none;}
+      #StartRoomVideo {display: none;}
+      #koridore1Video {display: none;}
+      #bakSving1Video {display: none;}
+      #bakDoora1Video {display: none;}
+      #lianeRykerVideo {display: none;}
+      #lianeSolidVideo {display: none;}
+      #gooRunt1Video {display: none;}
+      #provNormalSamtaleVideo {display: none;}
+      #Dis1Video {display: none;}
+      #LoopAngripVideo {display: none;}
+      #LoopTilbakeVideo {display: none;}
+      #HjelpStemeVideo {display: none;}
+      #ToFolkVideo {display: none;}
+      #HjelpStemeVideo {display: none;}
+      #KlarteIkkeHjelpeVideo {display: none;}
+      #KlarteHjelpeVideo {display: none;}
+      #overblikKoridor2Video {display: none;}
+      #koteGoInVideo {display: none;}
+      #UtKoteVideo {display: none;}
+      #VinduValg1Video {display: none;}
+      #VinduValg2Video {display: none;}
+      #lopVidreVideo {display: none;}
+      #VinduToVideo {display: none;}
+      #gotilKoridorVideo {display: none;}
+      #IkkeKubeinVideo {display: none;}
+      #Hoyere2Video {display: none;}
+      #Venstere2Video {display: none;}
+      #Dobeltjenger1Video {display: none;}
+      #Dobeltjenger2Video {display: none;}
+      #HopToVideo {display: none;}
+      #HopVideo {display: none;}
+      #HopHjelpVideo {display: none;}
+      #HopStikVideo {display: none;}
+      #koridoreKoteNedToVideo {display: none;}
+      #koridoreKoteToVideo {display: none;}
+      #koridoreKoteToHoyereVideo {display: none;}
+      #koridoreKoteToVenstereVideo {display: none;}
+      #IkkeVinduVideo {display: none;}
+      #VinduVideo {display: none;}
+      #VinduTo2Video {display: none;}
+      #LianeRoomRuntToVideo {display: none;}
+      #LianeRoomReversVideo {display: none;}
+      #LianeRoomRuntReversToVideo {display: none;}
+      #venstereTo1Video {display: none;}
+      #hoyereTo1Video {display: none;}
+      #GameOverVideo {display: none;}
+      #utAleneVideo {display: none;}
+      #utVideo {display: none;}
+      #utToVideo {display: none;}
+      #dodeVideo {display: none;}
+
+      #AlternativTextB {display: none;}
+      #overblikKoteKoridor {display: none;}
+      #overblikRoom1 {display: none;}
+      #overblikKoridor1 {display: none;}
+      #overblikToFolk {display: none;}
+      #overblikLiane {display: none;}
+      #overblikKujern {display: none;}
+      #overblikKote {display: none;}
+      #overblikKoridor1to {display: none;}
+      #overblikKoridor {display: none;}
+      #Titel {display: block;}
+
+      #ValgText {display: none;}
+
+      #alternativA {display: none;}
+      #alternativB {display: none;}
+
+      #AlHøyere1 {display: none;}
+      #AlVenstere1 {display: none;}
+
+      #AlgaaRunt1 {display: none;}
+      #AlbrukLianer {display: none;}
+
+      #AlAngrip1 {display: none;}
+      #AlLoopTilbake {display: none;}
+      #AlLoopGjenom {display: none;}
+      #AlPrat {display: none;}
+
+      #AlSamtale {display: none;}
+      #AlDis {display: none;}
+      #AlForje {display: none;}
+
+      #Aldis1 {display: none;}
+      #Aldis2 {display: none;}
+
+      #AlforsteRoom {display: none;}
+      #Alfremover {display: none;}
+
+      #AlLopVidre {display: none;}
+      #AlHjelp {display: none;}
+
+      #AlKote {display: none;}
+      #AlHoyere2 {display: none;}
+      #AlVenstere2 {display: none;}
+      #Alned {display: none;}
+
+      #AlTaKubein {display: none;}
+      #AlIkkeKubein {display: none;}
+
+      #AlHop {display: none;}
+      #AldobeltKoridor {display: none;}
+
+      #AlHopHjelp {display: none;}
+      #AlHopStik {display: none;}
+
+      #AlSlute {display: none;}
+
+      #AlLianeRoom2 {display: none;}
+
+      #AlLianeRoomRevers {display: none;}
+
+      #TilbakeTilStart {display: none;}
+
+    </style>
+  </head>
+  <body>
+
+    <div class="top">
+      <img src="VideorOgBilder/BildeOgVideoBox.png" alt="BildeOgVideoBox" width="700px">
+    </div>
+
+    <div class="videorOgBilder">
+     <div class="videorOgBilder3">
+      <div class="textDiv">
+       <h1 id="tekstOverskrift">Les</h1>
+       <p id="senarioText">escape så kjapt som mulig. Du kommer til å ha en teller som starter på 1000 og går ned hver gang du gjør et valg. Hvis den havner på 0 har du tapt.</p>
+       <p id="ValgText">Du kan velge mellom å prøve og åpne døra eller vente og se hva som skjer. Hva vil du gjøre?</p>
+       <p id="AlternativTextA"></p>
+       <p id="AlternativTextB"></p>
+       <p id="AlternativTextC"></p>
+      </div>
+     </div>
+
+     <div class="videorOgBilder2">
+
+     <video id="StartRoomVideo" onended="startRoomVideo()" width="500px">
+     <source src="VideorOgBilder/Room.mp4">
+     </video>
+
+     <video id="koridore1Video" onended="koridore1Video()" width="500px">
+     <source src="VideorOgBilder/Koridor.mp4">
+     </video>
+
+     <video id="bakSving1Video" onended="bakSving1Video()" width="500px">
+     <source src="VideorOgBilder/venstere1.mp4">
+     </video>
+
+     <video id="bakDoora1Video" onended="bakDoora1Video()" width="500px">
+     <source src="VideorOgBilder/hoyere1.mp4">
+     </video>
+
+     <video id="provNormalSamtaleVideo" onended="provNormalSamtaleVideo()" width="500px">
+     <source src="VideorOgBilder/provNormalSamtale.mp4">
+     </video>
+
+     <video id="Dis1Video" onended="dis1Video()" width="500px">
+     <source src="VideorOgBilder/dis.mp4">
+     </video>
+
+     <video id="LoopAngripVideo" onended="LoopAngripVideo()" width="500px">
+     <source src="VideorOgBilder/LoopAngrip.mp4">
+     </video>
+
+     <video id="LoopTilbakeVideo" onended="LoopTilbakeVideo()" width="500px">
+     <source src="VideorOgBilder/LopAndreVeien.mp4">
+     </video>
+
+     <video id="lianeRykerVideo" onended="lianeRykerVideo()" width="500px">
+     <source src="VideorOgBilder/lianeRyker.mp4">
+     </video>
+
+     <video id="lianeSolidVideo" onended="lianeSolidVideo()" width="500px">
+     <source src="VideorOgBilder/lianeSolid.mp4">
+     </video>
+
+     <video id="gooRunt1Video" onended="gooRunt1Video()" width="500px">
+     <source src="VideorOgBilder/goRunt.mp4">
+     </video>
+
+     <video id="HjelpStemeVideo" onended="HjelpStemeVideo()" width="500px">
+     <source src="VideorOgBilder/HjelpeValg.mp4">
+     </video>
+
+     <video id="KlarteIkkeHjelpeVideo" onended="KlarteIkkeHjelpeVideo()" width="500px">
+     <source src="VideorOgBilder/Hjelp.mp4">
+     </video>
+
+     <video id="KlarteHjelpeVideo" onended="KlarteHjelpeVideo()" width="500px">
+     <source src="VideorOgBilder/kuJerni.mp4">
+     </video>
+
+     <video id="lopVidreVideo" onended="lopVidreVideo()" width="500px">
+     <source src="VideorOgBilder/lopVidre.mp4">
+     </video>
+
+     <video id="VinduValg1Video" onended="VinduValg1Video()" width="500px">
+     <source src="VideorOgBilder/VinduValg1.mp4">
+     </video>
+
+     <video id="VinduValg2Video" onended="VinduValg2Video()" width="500px">
+     <source src="VideorOgBilder/VinduValg.mp4">
+     </video>
+
+     <video id="VinduToVideo" onended="VinduToVideo()" width="500px">
+     <source src="VideorOgBilder/vinduTo_1.mp4">
+     </video>
+
+     <video id="overblikKoridor2Video" onended="overblikKoridor2Video()" width="500px">
+     <source src="VideorOgBilder/kote.mp4">
+     </video>
+
+     <video id="koteGoInVideo" onended="koteGoInVideo()" width="500px">
+     <source src="VideorOgBilder/koteGoIn.mp4">
+     </video>
+
+     <video id="UtKoteVideo" onended="UtKoteVideo()" width="500px">
+     <source src="VideorOgBilder/UtKote.mp4">
+     </video>
+
+     <video id="gotilKoridorVideo" onended="gotilKoridorVideo()" width="500px">
+     <source src="VideorOgBilder/gotilKotidor.mp4">
+     </video>
+
+     <video id="IkkeKubeinVideo" onended="IkkeKubeinVideo()" width="500px">
+     <source src="VideorOgBilder/ikkeKujern.mp4">
+     </video>
+
+     <video id="Hoyere2Video" onended="Hoyere2Video()" width="500px">
+     <source src="VideorOgBilder/hoyere2.mp4">
+     </video>
+
+     <video id="Venstere2Video" onended="Venstere2Video()" width="500px">
+     <source src="VideorOgBilder/venstere2.mp4">
+     </video>
+
+     <video id="Dobeltjenger1Video" onended="Dobeltjenger1Video()" width="500px">
+     <source src="VideorOgBilder/dobeltjenger1.mp4">
+     </video>
+
+     <video id="Dobeltjenger2Video" onended="Dobeltjenger2Video()" width="500px">
+     <source src="VideorOgBilder/dobeltjenger2.mp4">
+     </video>
+
+     <video id="HopToVideo" onended="HopToVideo()" width="500px">
+     <source src="VideorOgBilder/hopVinduTo.mp4">
+     </video>
+
+     <video id="HopVideo" onended="HopVideo()" width="500px">
+     <source src="VideorOgBilder/hopVindu.mp4">
+     </video>
+
+     <video id="HopHjelpVideo" onended="HopHjelpVideo()" width="500px">
+     <source src="VideorOgBilder/HopHjelp.mp4">
+     </video>
+
+     <video id="HopStikVideo" onended="HopStikVideo()" width="500px">
+     <source src="VideorOgBilder/HopStik.mp4">
+     </video>
+
+     <video id="IkkeVinduVideo" onended="Dobeltjenger2Video()" width="500px">
+     <source src="VideorOgBilder/IkkeVindu.mp4">
+     </video>
+
+     <video id="koridoreKoteToVenstereVideo" onended="koridoreKoteToVenstereVideo()" width="500px">
+     <source src="VideorOgBilder/koridorKoteToVenstere.mp4">
+     </video>
+
+     <video id="koridoreKoteToHoyereVideo" onended="Hoyere2Video()" width="500px">
+     <source src="VideorOgBilder/koridorKoteToHoyere.mp4">
+     </video>
+
+     <video id="koridoreKoteToVideo" onended="overblikKoridor2Video()" width="500px">
+     <source src="VideorOgBilder/koridorKoteTo.mp4">
+     </video>
+
+     <video id="koridoreKoteNedToVideo" onended="gotilKoridorVideo()" width="500px">
+     <source src="VideorOgBilder/koridorKoteToNed.mp4">
+     </video>
+
+     <video id="VinduVideo" onended="VinduVideo()" width="500px">
+     <source src="VideorOgBilder/VinduValg.mp4">
+     </video>
+
+     <video id="VinduTo2Video" onended="VinduTo2Video()" width="500px">
+     <source src="VideorOgBilder/vinduTo_2.mp4">
+     </video>
+
+     <video id="LianeRoomReversVideo" onended="LianeRoomReversVideo()" width="500px">
+     <source src="VideorOgBilder/LRRR.mp4">
+     </video>
+
+     <video id="LianeRoomRuntReversToVideo" onended="LianeRoomReversVideo()" width="500px">
+     <source src="VideorOgBilder/LRRRT.mp4">
+     </video>
+
+     <video id="LianeRoomRuntToVideo" onended="LianeRoomRuntToVideo()" width="500px">
+     <source src="VideorOgBilder/LRRT.mp4">
+     </video>
+
+     <video id="venstereTo1Video" onended="bakSving1Video()" width="500px">
+     <source src="VideorOgBilder/venstereTo1.mp4">
+     </video>
+
+     <video id="hoyereTo1Video" onended="hoyereTo1Video()" width="500px">
+     <source src="VideorOgBilder/hoyereTo1.mp4">
+     </video>
+
+     <video id="GameOverVideo" onended="GameOverVideo()" width="500px">
+     <source src="VideorOgBilder/GameOver.mp4">
+     </video>
+
+     <video id="utVideo" onended="utVideo()" width="500px">
+     <source src="VideorOgBilder/Ut.mp4">
+     </video>
+
+     <video id="utToVideo" onended="utToVideo()" width="500px">
+     <source src="VideorOgBilder/UtTo.mp4">
+     </video>
+
+     <video id="utAleneVideo" onended="utAleneVideo()" width="500px">
+     <source src="VideorOgBilder/UtAlene.mp4">
+     </video>
+
+     <video id="dodeVideo" width="500px">
+     <source src="VideorOgBilder/dode.mp4">
+     </video>
+     <img id="Titel" src="VideorOgBilder/escapeRoom.png" alt="EscapeRoom" width="500px">
+
+     <img id="overblikRoom1" src="VideorOgBilder/Room1.jpg" alt="overblikRoom" width="500px">
+
+     <img id="overblikKoridor1" src="VideorOgBilder/Koridor1.jpg" alt="overblikKoridor" width="500px">
+
+     <img id="overblikToFolk" src="VideorOgBilder/ToFolk.jpg" alt="overblikToFolk" width="500px">
+
+     <img id="overblikLiane" src="VideorOgBilder/lianeBilde.jpg" alt="overblikLiane" width="500px">
+
+     <img  id="overblikKote" src="VideorOgBilder/overblikKoteKoridor.jpg" alt="overblikKote" width="500px">
+
+     <img  id="overblikKujern" src="VideorOgBilder/overblikKujern.jpg" alt="overblikKujern" width="500px">
+
+     <img  id="overblikKoridor1to" src="VideorOgBilder/Koridor1to.jpg" alt="overblikKoridor1to" width="500px">
+
+     <img  id="overblikKoridor" src="VideorOgBilder/Koridor.jpg" alt="overblikKoridor" width="500px">
+     </div>
+     <div class="videorOgBilder3">
+       <h1 id="tidOverskrift">Viktig og følge med på</h1>
+       <p id="TideText">Dette er tid du har igjen:</p>
+       <p id="Tide"></p>
+     </div>
+    </div>
+<div class="melomromDiv"></div>
+
+    <div class="alternativDiv1">
+     <div class="alternativDiv2">
+     </div>
+     <div class="alternativDiv3">
+    <button id="BevistLos" onclick="BevistLos()">Fortsett</button>
+
+    <button id="alternativA" onclick="alterA()">Vent</button>
+    <button id="alternativB" onclick="alterB()">Åpne døra</button>
+
+    <button id="AlVenstere1" onclick="AlVenstere1()">Gå til venstre</button>
+    <button id="AlHøyere1" onclick="AlHøyere1()"></button>
+
+    <button id="AlgaaRunt1" onclick="AlgaaRunt1()">Gå rundt</button>
+    <button id="AlbrukLianer" onclick="AlbrukLianer()">Sleng deg over med lianer</button>
+
+    <button id="AlAngrip1" onclick="AlLoopAngrip()">Angrip</button>
+    <button id="AlLoopTilbake" onclick="AlLoopTilbake()">Løp den andre veien</button>
+    <button id="AlLoopGjenom" onclick="AlLoopAngrip()">Løp forbi dem</button>
+    <button id="AlPrat" onclick="AlPrat()">Prat med dem</button>
+
+    <button id="AlSamtale" onclick="AlSamtale()">Prøv og ha en normal samtale med dem</button>
+    <button id="AlDis" onclick="Aldis()">Diss dem</button>
+    <button id="AlForje" onclick="ToFolk()">Tilbake til forrige valg</button>
+
+    <button id="Aldis1" onclick="Aldis1()">Diss den minste</button>
+    <button id="Aldis2" onclick="Aldis2()">Diss den største</button>
+
+    <button id="AlforsteRoom" onclick="AlforsteRoom()">Gå in i rommet til høyre</button>
+    <button id="Alfremover" onclick="Alfremover()">Fortsett framover</button>
+
+    <button id="AlLopVidre" onclick="AlLopVidre()">Løp vidre</button>
+    <button id="AlHjelp" onclick="AlHjelp()">Prøv og hjelpe</button>
+
+    <button id="AlKote" onclick="AlKote()">Gå in i rommet</button>
+    <button id="AlVenstere2" onclick="AlVenstere2()">Gå venstre</button>
+    <button id="AlHoyere2" onclick="AlHoyere2()">Gå høyre</button>
+    <button id="Alned" onclick="Alned()">Gå ned</button>
+
+    <button id="AlTaKubein" onclick="AlTaKubein()">Ta med</button>
+    <button id="AlIkkeKubein" onclick="AlIkkeKubein()">Ikke ta med</button>
+
+    <button id="AlHop" onclick="AlHop()">Hopp ut av vinduet</button>
+    <button id="AldobeltKoridor" onclick="AldobeltKoridor()">Løp venstre</button>
+
+    <button id="AlHopHjelp" onclick="AlHopHjelp()">Hjelp</button>
+    <button id="AlHopStik" onclick="AlHopStik()">Forlat</button>
+
+    <button id="AlSlute" onclick="AlSlute()">Fortsett</button>
+
+    <button id="AlLianeRoom2" onclick="AlLianeRoom2()">Fortsett</button>
+
+    <button id="AlLianeRoomRevers" onclick="AlLianeRoomRevers()">Gå bakover</button>
+
+    <button id="TilbakeTilStart" onclick="TilbakeTilStart()">Fortsett</button>
+
+    <button id="Start" onclick="Start()">Start</button>
+     </div>
+    </div>
+
+
+    <script>
+
+    var tide=1000;
+    document.getElementById("Tide").innerHTML = tide;
+    var lydBak = 1;
+    var vaakne = false;
+    var kuJern = false;
+    var vekt = 0;
+    var antalGangerIRoom = 0;
+    var partner=0;
+    var doreSlag = 0;
+    var toFolk = "Der ser du to karer foran deg, den ene større enn den andre. De ser ut som de har lyst til og banke deg."
+    var hjelpeSteme=0;
+//----------------------------------------------------------
+    function Start(){
+     document.getElementById("tekstOverskrift").innerHTML = "Altid les på nytt";
+     document.getElementById("tidOverskrift").style.display = "none";
+     document.getElementById("Titel").style.display = "none";
+     document.getElementById("dodeVideo").style.display = "none";
+     document.getElementById("Start").style.display = "none";
+     document.getElementById("senarioText").innerHTML = "Du våkner opp i et kaldt hvitt rom. Du ser deg litt rundt før du oppdager en klokke på hånda med en nedteller";
+     document.getElementById("Tide").style.display = "block";
+     document.getElementById("StartRoomVideo").load();
+     document.getElementById("StartRoomVideo").style.display = "block";
+     document.getElementById("StartRoomVideo").play();
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken";
+      dode();
+     }
+    }
+
+    function startRoomVideo(){
+     document.getElementById("overblikKote").style.display = "none";
+     lydBak = 1;
+     antalGangerIRoom = 0;
+     vekt = 0;
+     kuJern = false;
+     hjelpeSteme=0;
+     vaakne = false;
+     partner=0;
+     document.getElementById("StartRoomVideo").style.display = "none";
+     document.getElementById("overblikRoom1").style.display = "block";
+     document.getElementById("ValgText").style.display = "block";
+     document.getElementById("alternativA").style.display = "block";
+     document.getElementById("alternativB").style.display = "block";
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken";
+      dode();
+     }
+    }
+
+
+    function koridore1Video(){
+     document.getElementById("koridore1Video").style.display = "none";
+     document.getElementById("AlternativTextA").style.display = "block";
+     if (partner==0) {
+      document.getElementById("overblikKoridor1").style.display = "block";
+     }
+     if (partner==1) {
+      document.getElementById("overblikKoridor1to").style.display = "block";
+     }
+
+     if (lydBak==1) {
+      document.getElementById("AlternativTextA").innerHTML = "Til høyre er det en lang gang som fører til en dør. Til venstre stopper gangen før den svinger. Bak svingen hører du noen lyder.";
+     }
+     if (lydBak==2) {
+      document.getElementById("AlternativTextA").innerHTML = "Til høyre er det en lang gang som fører til en dør. Bak døra hører du noen lyder. Til venstre stopper gangen før den svinger.";
+     }
+     if (lydBak!=2 && lydBak!=1) {
+      document.getElementById("AlternativTextA").innerHTML = "Til høyre er det en lang gang som fører til en dør. Til venstre stopper gangen før den svinger.";
+     }
+     document.getElementById("AlHøyere1").innerHTML = "Gå til høyre";
+     document.getElementById("AlHøyere1").style.display = "block";
+     document.getElementById("AlVenstere1").style.display = "block";
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken";
+      dode();
+     }
+    }
+
+    function bakSving1Video(){
+      document.getElementById("bakSving1Video").style.display = "none";
+      if (lydBak==2) {
+       ToFolk();
+      }
+      else {
+       KoteKoridore();
+      }
+
+      if (lydBak==6) {
+       lydBak=1;
+      }
+      if (tide<=0) {
+       document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+       dode();
+      }
+    }
+
+    function KoteKoridore(){
+     document.getElementById("AlternativTextA").style.display = "block";
+     document.getElementById("AlternativTextA").innerHTML = "Det er et rom til venstre. Hva vil du gjøre?";
+     if (partner==0) {
+      document.getElementById("overblikKoridor2Video").load()
+      document.getElementById("overblikKoridor2Video").style.display = "block";
+      document.getElementById("overblikKoridor2Video").play()
+     }
+     if (partner==1) {
+      document.getElementById("koridoreKoteToVideo").load()
+      document.getElementById("koridoreKoteToVideo").style.display = "block";
+      document.getElementById("koridoreKoteToVideo").play()
+     }
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken";
+      dode();
+     }
+    }
+
+    function overblikKoridor2Video(){
+     if (kuJern == false) {
+      document.getElementById("AlKote").style.display = "block";
+     }
+     document.getElementById("AlHoyere2").style.display = "block";
+     document.getElementById("AlVenstere2").style.display = "block";
+     document.getElementById("Alned").style.display = "block";
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function FjernKoteKoridorValg(){
+     document.getElementById("koridoreKoteToVideo").style.display = "none";
+     document.getElementById("overblikKoridor2Video").style.display = "none";
+     document.getElementById("overblikKote").style.display = "none";
+     document.getElementById("AlKote").style.display = "none";
+     document.getElementById("AlHoyere2").style.display = "none";
+     document.getElementById("AlVenstere2").style.display = "none";
+     document.getElementById("Alned").style.display = "none";
+     if (lydBak==6) {
+       lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function Alned(){
+     if (partner==0) {
+      document.getElementById("gotilKoridorVideo").load();
+      document.getElementById("gotilKoridorVideo").style.display = "block";
+      document.getElementById("gotilKoridorVideo").play();
+     }
+     if (partner==1) {
+      document.getElementById("koridoreKoteNedToVideo").load();
+      document.getElementById("koridoreKoteNedToVideo").style.display = "block";
+      document.getElementById("koridoreKoteNedToVideo").play();
+     }
+
+     FjernKoteKoridorValg();
+     lydBak=lydBak+1;
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function koridoreKoteNedToVideo(){
+     gotilKoridorVideo();
+    }
+
+    function gotilKoridorVideo(){
+     document.getElementById("koridoreKoteNedToVideo").style.display = "none";
+     document.getElementById("gotilKoridorVideo").style.display = "none";
+     koridore1Video();
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlKote(){
+     document.getElementById("koteGoInVideo").load();
+     document.getElementById("koteGoInVideo").style.display = "block";
+     document.getElementById("koteGoInVideo").play();
+     document.getElementById("senarioText").innerHTML = "Du gikk inn i et lite kott der du så et kubein";
+     FjernKoteKoridorValg();
+     lydBak=lydBak+1;
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function koteGoInVideo(){
+     document.getElementById("koteGoInVideo").style.display = "none";
+     document.getElementById("overblikKujern").style.display = "block";
+     document.getElementById("AlternativTextA").innerHTML = "Du kan velge å ta den med, men den vil sakke deg ned eller så kan du la den være.";
+     document.getElementById("AlIkkeKubein").style.display = "block";
+     document.getElementById("AlTaKubein").style.display = "block";
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlIkkeKubein(){
+     document.getElementById("overblikKujern").style.display = "none";
+     document.getElementById("AlIkkeKubein").style.display = "none";
+     document.getElementById("AlTaKubein").style.display = "none";
+     document.getElementById("IkkeKubeinVideo").style.display = "block";
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlTaKubein(){
+     document.getElementById("overblikKujern").style.display = "none";
+     document.getElementById("AlIkkeKubein").style.display = "none";
+     document.getElementById("AlTaKubein").style.display = "none";
+     document.getElementById("UtKoteVideo").load();
+     document.getElementById("UtKoteVideo").style.display = "block";
+     document.getElementById("UtKoteVideo").play();
+     vekt = 1;
+     kuJern = true;
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function IkkeKubeinVideo(){
+     document.getElementById("IkkeKubeinVideo").style.display = "none";
+     document.getElementById("UtKoteVideo").load();
+     document.getElementById("UtKoteVideo").style.display = "block";
+     document.getElementById("UtKoteVideo").play();
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function UtKoteVideo(){
+     document.getElementById("UtKoteVideo").style.display = "none";
+     if (lydBak!=1) {
+      KoteKoridore();
+     }
+     if (lydBak==1) {
+      document.getElementById("senarioText").style.display = "block";
+      document.getElementById("senarioText").innerHTML = "Du skulle akkurat til å gå ut av kottet da to karer åpnet døra og slo deg ned.";
+      dode();
+      BevistLos();
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlHoyere2(){
+    if (partner==0) {
+     if (lydBak==5) {
+      hjelpeSteme=1;
+      ToFolk()
+     }
+     if (lydBak!=5) {
+      document.getElementById("Hoyere2Video").load();
+      document.getElementById("Hoyere2Video").style.display = "block";
+      document.getElementById("Hoyere2Video").play();
+      lydBak=lydBak+1;
+     }
+    }
+    if (partner==1) {
+     document.getElementById("senarioText").innerHTML = "Du løp rundt en alligatordam hele veien bort til et vindu.";
+     document.getElementById("koridoreKoteToHoyereVideo").load();
+     document.getElementById("koridoreKoteToHoyereVideo").style.display = "block";
+     document.getElementById("koridoreKoteToHoyereVideo").play();
+     lydBak=lydBak+1;
+    }
+
+     document.getElementById("senarioText").innerHTML = "Du løp oppover og svingte til høyre.";
+     FjernKoteKoridorValg();
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlVenstere2(){
+    if (partner==0) {
+     document.getElementById("Venstere2Video").load();
+     document.getElementById("Venstere2Video").style.display = "block";
+     document.getElementById("Venstere2Video").play();
+     document.getElementById("AlternativTextA").innerHTML = "Du løp oppover og svingte til venstre. Du gikk og gikk og plutselig var du ute.";
+    }
+    if (partner==1) {
+     document.getElementById("koridoreKoteToVenstereVideo").load();
+     document.getElementById("koridoreKoteToVenstereVideo").style.display = "block";
+     document.getElementById("koridoreKoteToVenstereVideo").play();
+     document.getElementById("AlternativTextB").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+     document.getElementById("senarioText").innerHTML = "Dere gikk til venstre. Dere gikk og gikk og plutselig var dere ute.";
+    }
+     FjernKoteKoridorValg();
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function koridoreKoteToVenstereVideo(){
+     document.getElementById("koridoreKoteToVenstereVideo").style.display = "none";
+     Venstere2Video();
+    }
+
+    function Venstere2Video(){
+     document.getElementById("Venstere2Video").style.display = "none";
+     if (partner==0) {
+      document.getElementById("utVideo").load();
+      document.getElementById("utVideo").style.display = "block";
+      document.getElementById("utVideo").play();
+     }
+     if (partner==1) {
+      document.getElementById("utToVideo").load();
+      document.getElementById("utToVideo").style.display = "block";
+      document.getElementById("utToVideo").play();
+     }
+    }
+
+    function utToVideo(){
+     document.getElementById("utToVideo").style.display = "none";
+     utVideo();
+    }
+
+    function utVideo(){
+     document.getElementById("utVideo").style.display = "none";
+     document.getElementById("utAleneVideo").load();
+     document.getElementById("utAleneVideo").style.display = "block";
+     document.getElementById("utAleneVideo").play();
+    }
+
+    function Hoyere2Video(){
+     document.getElementById("Hoyere2Video").style.display = "none";
+     if (partner==0) {
+      document.getElementById("AlternativTextA").innerHTML = "Der så du en person rett foran deg, men før du fikk tenkt deg om stormet du rett mot ham.";
+      document.getElementById("Dobeltjenger1Video").load();
+      document.getElementById("Dobeltjenger1Video").style.display = "block";
+      document.getElementById("Dobeltjenger1Video").play();
+     }
+     if (partner==1) {
+      document.getElementById("koridoreKoteToHoyereVideo").style.display = "none";
+      document.getElementById("VinduTo2Video").load();
+      document.getElementById("VinduTo2Video").style.display = "block";
+      document.getElementById("VinduTo2Video").play();
+     }
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function VinduTo2Video(){
+     document.getElementById("AlHop").style.display = "block";
+     document.getElementById("AldobeltKoridor").style.display = "block";
+     document.getElementById("AlLianeRoom2").style.display = "block";
+    }
+
+    function AlLianeRoom2(){
+     if (partner==1) {
+      document.getElementById("LianeRoomRuntToRevers").style.display = "block";
+     }
+     if (partner==2) {
+      document.getElementById("LianeRoomRuntRevers").style.display = "block";
+     }
+    }
+
+    function Dobeltjenger1Video(){
+     document.getElementById("senarioText").innerHTML = "Der så du en person rett foran deg, men før du fikk tenkt deg om stormet du rett mot ham.";
+     BevistLos();
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function bakDoora1Video(){
+      document.getElementById("bakDoora1Video").style.display = "none";
+      if (lydBak==3) {
+       ToFolk();
+      }
+      else {
+       lianeRoom();
+      }
+
+      if (lydBak==6) {
+       lydBak=1;
+      }
+      if (tide<=0) {
+       document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+       dode();
+      }
+     }
+
+    function lianeRoom(){
+      document.getElementById("AlternativTextA").style.display = "block";
+      if (antalGangerIRoom == 0) {
+       document.getElementById("AlternativTextA").innerHTML = "Du gikk inn i rommet. Du ble sjokkert av å se en alligatordam rett foran deg med lianer hengene fra taket.";
+      }
+      antalGangerIRoom = antalGangerIRoom+1;
+      document.getElementById("AlternativTextB").style.display = "block";
+      document.getElementById("AlternativTextB").innerHTML = "Du kan velge å ta den trygge veien rundt, men det vil ta 50 eller så kan du prøve å slenge deg som Tarzan med lianene, men det er 50% sjanse at lianen ryker. Hvis den ryker vil du miste 30 og får valget på nytt. Det tar bare 2 vis du klarer å komme over med lianene.";
+      document.getElementById("AlbrukLianer").style.display = "block";
+      document.getElementById("AlgaaRunt1").style.display = "block";
+      document.getElementById("AlforsteRoom").style.display = "none";
+      document.getElementById("overblikLiane").style.display = "block";
+
+      if (lydBak==6) {
+       lydBak=1;
+      }
+      if (tide<=0) {
+       document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+       dode();
+      }
+    }
+
+    function ToFolk(){
+     if (lydBak==5 || lydBak==2 || lydBak==3) {
+      document.getElementById("overblikToFolk").style.display = "block";
+      document.getElementById("AlternativTextA").style.display = "block";
+      document.getElementById("AlternativTextA").innerHTML = toFolk;
+
+      document.getElementById("AlSamtale").style.display = "none";
+      document.getElementById("AlDis").style.display = "none";
+      document.getElementById("AlForje").style.display = "none";
+      document.getElementById("AlAngrip1").style.display = "block";
+      document.getElementById("AlLoopTilbake").style.display = "block";
+      document.getElementById("AlLoopGjenom").style.display = "block";
+      document.getElementById("AlPrat").style.display = "block";
+     }
+     else {
+      document.getElementById("senarioText").innerHTML = "To folk tok deg bakfra når du ikke vare forberedt på det.";
+      dode();
+      BevistLos();
+     }
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function alterA(){
+     document.getElementById("senarioText").innerHTML = "du venta litt, men det virka som ingenting skjedde.";
+     lydBak = lydBak + 1;
+     tide=tide-15-vekt;
+     document.getElementById("Tide").innerHTML = tide;
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function alterB(){
+     document.getElementById("overblikRoom1").style.display = "none";
+     document.getElementById("alternativA").style.display = "none";
+     document.getElementById("alternativB").style.display = "none";
+     document.getElementById("ValgText").style.display = "none";
+     document.getElementById("koridore1Video").load();
+     document.getElementById("koridore1Video").style.display = "block";
+     document.getElementById("koridore1Video").play();
+     if (doreSlag==0) {
+      document.getElementById("senarioText").innerHTML = "Du gikk til døra og forventa at den var låst, men det var den ikke. Du åpna døra uten problemer og gikk gjennom. Du er nå i en korridor og har to muligheter.";
+     }
+     if (doreSlag==1) {
+      document.getElementById("senarioText").innerHTML = "Da du åpna døra hørte du et smell og så på bakken. Der lå det en person som var bevisstløs, men du tenkte ikke så mye på det.";
+      doreSlag=0;
+     }
+     document.getElementById("Tide").innerHTML = tide;
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlHøyere1(){
+     document.getElementById("overblikKoridor1").style.display = "none";
+     document.getElementById("AlHøyere1").style.display = "none";
+     document.getElementById("AlVenstere1").style.display = "none";
+     document.getElementById("AlternativTextA").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+     if (partner==1) {
+       document.getElementById("overblikKoridor1to").style.display = "none";
+       document.getElementById("hoyereTo1Video").load()
+       document.getElementById("hoyereTo1Video").style.display = "block";
+       document.getElementById("hoyereTo1Video").play();
+     }
+     if (partner==0) {
+       document.getElementById("senarioText").innerHTML = "Du gikk til høyre ned til enden av gangen og åpna døra.";
+       document.getElementById("bakDoora1Video").load()
+       document.getElementById("bakDoora1Video").style.display = "block";
+       document.getElementById("bakDoora1Video").play();
+       document.getElementById("overblikKoridor").style.display = "none";
+     }
+
+     lydBak=lydBak+1;
+
+     tide=tide-5-vekt;
+     document.getElementById("Tide").innerHTML = tide;
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+    function hoyereTo1Video(){
+     document.getElementById("hoyereTo1Video").style.display = "none";
+     document.getElementById("LianeRoomRuntToVideo").load()
+     document.getElementById("LianeRoomRuntToVideo").style.display = "block";
+     document.getElementById("LianeRoomRuntToVideo").play();
+    }
+
+    function AlVenstere1(){
+     document.getElementById("overblikKoridor1").style.display = "none";
+     document.getElementById("AlHøyere1").style.display = "none";
+     document.getElementById("AlVenstere1").style.display = "none";
+     document.getElementById("senarioText").innerHTML = "Du gikk rundt svingen.";
+     document.getElementById("AlternativTextA").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+     if (partner==0) {
+      document.getElementById("bakSving1Video").load()
+      document.getElementById("bakSving1Video").style.display = "block";
+      document.getElementById("bakSving1Video").play();
+      document.getElementById("overblikKoridor").style.display = "none";
+     }
+     if (partner==1) {
+      document.getElementById("venstereTo1Video").load()
+      document.getElementById("venstereTo1Video").style.display = "block";
+      document.getElementById("venstereTo1Video").play();
+     }
+     lydBak=lydBak+1;
+
+     tide=tide-2-vekt;
+     document.getElementById("Tide").innerHTML = tide;
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlPrat(){
+     document.getElementById("AlAngrip1").style.display = "none";
+     document.getElementById("AlLoopTilbake").style.display = "none";
+     document.getElementById("AlLoopGjenom").style.display = "none";
+     document.getElementById("AlPrat").style.display = "none";
+     document.getElementById("AlSamtale").style.display = "block";
+     document.getElementById("AlDis").style.display = "block";
+     document.getElementById("AlForje").style.display = "block";
+
+     tide=tide-1-vekt;
+     document.getElementById("Tide").innerHTML = tide;
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlSamtale(){
+     document.getElementById("provNormalSamtaleVideo").load()
+     document.getElementById("provNormalSamtaleVideo").style.display = "block";
+     document.getElementById("provNormalSamtaleVideo").play();
+     document.getElementById("senarioText").innerHTML = "Du gikk bort til dem å skulle akkurat til å si noe før du ble slått i fjeset og knocket ned."
+     document.getElementById("overblikToFolk").style.display = "none";
+     document.getElementById("AlternativTextA").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+     document.getElementById("AlSamtale").style.display = "none";
+     document.getElementById("AlDis").style.display = "none";
+     document.getElementById("AlForje").style.display = "none";
+
+     document.getElementById("Tide").style.display = "none";
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function provNormalSamtaleVideo(){
+     BevistLos();
+    }
+
+    function Aldis(){
+     document.getElementById("AlSamtale").style.display = "none";
+     document.getElementById("AlDis").style.display = "none";
+     document.getElementById("AlForje").style.display = "none";
+     document.getElementById("Aldis1").style.display = "block";
+     document.getElementById("Aldis2").style.display = "block";
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function Aldis1(){
+      document.getElementById("Dis1Video").load()
+      document.getElementById("Dis1Video").style.display = "block";
+      document.getElementById("Dis1Video").play();
+      document.getElementById("Aldis1").style.display = "none";
+      document.getElementById("Aldis2").style.display = "none";
+      document.getElementById("overblikToFolk").style.display = "none";
+
+      if (lydBak==6) {
+       lydBak=1;
+      }
+      if (tide<=0) {
+       document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+       dode();
+      }
+    }
+
+    function Aldis2(){
+      document.getElementById("provNormalSamtaleVideo").load()
+      document.getElementById("provNormalSamtaleVideo").style.display = "block";
+      document.getElementById("provNormalSamtaleVideo").play();
+      document.getElementById("Aldis1").style.display = "none";
+      document.getElementById("Aldis2").style.display = "none";
+      document.getElementById("overblikToFolk").style.display = "none";
+
+      if (lydBak==6) {
+       lydBak=1;
+      }
+      if (tide<=0) {
+       document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+       dode();
+      }
+    }
+
+    function dis1Video(){
+     document.getElementById("Dis1Video").style.display = "none";
+     if (lydBak==2) {
+      KoteKoridore();
+     }
+     if (lydBak==3) {
+      lianeRoom();
+     }
+     if (lydBak==5) {
+      lopVidreVideo()
+     }
+     lydBak = -1000;
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function provNormalSamtaleVideo(){
+     BevistLos();
+     document.getElementById("provNormalSamtaleVideo").style.display = "none";
+
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlLoopTilbake(){
+      document.getElementById("LoopTilbakeVideo").load()
+      document.getElementById("LoopTilbakeVideo").style.display = "block";
+      document.getElementById("LoopTilbakeVideo").play();
+
+      document.getElementById("AlAngrip1").style.display = "none";
+      document.getElementById("AlLoopTilbake").style.display = "none";
+      document.getElementById("AlLoopGjenom").style.display = "none";
+      document.getElementById("AlPrat").style.display = "none";
+
+      document.getElementById("overblikToFolk").style.display = "none";
+
+      tide=tide-1-vekt;
+      document.getElementById("Tide").innerHTML = tide;
+      if (tide<=0) {
+       document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+       dode();
+      }
+    }
+
+    function LoopTilbakeVideo(){
+      document.getElementById("LoopTilbakeVideo").style.display = "none";
+
+      if (lydBak==3 || lydBak==2) {
+       document.getElementById("AlternativTextA").innerHTML = "Du løp tilbake til første korridor du var i.";
+       document.getElementById("AlternativTextB").innerHTML = "Hva vil du gjøre, vil du gå inn i rommet eller fortsette framover?";
+       document.getElementById("Alfremover").style.display = "block";
+       document.getElementById("AlforsteRoom").style.display = "block";
+       document.getElementById("overblikKoridor").style.display = "block";
+      }
+      if (lydBak==5) {
+       KoteKoridore();
+      }
+
+      if (tide<=0) {
+       document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+       dode();
+      }
+    }
+
+    function Alfremover(){
+     document.getElementById("AlforsteRoom").style.display = "none";
+     document.getElementById("Alfremover").style.display = "none";
+     document.getElementById("overblikKoridor").style.display = "none";
+
+     if (lydBak==2) {
+      document.getElementById("senarioText").innerHTML = "Du løp tilbake, og det virker som de følger etter deg.";
+      lianeRoom();
+     }
+     if (lydBak==3) {
+      KoteKoridore();
+     }
+     lydBak=lydBak+2
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlforsteRoom(){
+     doreSlag=1;
+     document.getElementById("senarioText").style.display = "block";
+     document.getElementById("senarioText").innerHTML = "Du skulle akkurat til og åpne døra da den åpna seg og traff deg rett i fjeset.";
+     dode();
+     BevistLos()
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+     document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode()
+     }
+    }
+
+    function AlLoopAngrip(){
+     document.getElementById("LoopAngripVideo").load()
+     document.getElementById("LoopAngripVideo").style.display = "block";
+     document.getElementById("LoopAngripVideo").play();
+
+     document.getElementById("senarioText").innerHTML = "Du løp mot dem.";
+
+     document.getElementById("overblikToFolk").style.display = "none";
+     document.getElementById("AlternativTextA").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+
+     document.getElementById("AlAngrip1").style.display = "none";
+     document.getElementById("AlLoopTilbake").style.display = "none";
+     document.getElementById("AlLoopGjenom").style.display = "none";
+     document.getElementById("AlPrat").style.display = "none";
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+    }
+
+    function LoopAngripVideo(){
+     BevistLos();
+    }
+
+    function AlbrukLianer(){
+     lianerSjankse = Math.floor(Math.random() * 2);
+
+     if (lianerSjankse == 0) {
+      document.getElementById("lianeRykerVideo").load()
+      document.getElementById("lianeRykerVideo").style.display = "block";
+      document.getElementById("lianeRykerVideo").play();
+      document.getElementById("AlgaaRunt1").style.display = "none";
+      document.getElementById("AlbrukLianer").style.display = "none";
+      document.getElementById("senarioText").innerHTML = "Lianen røyk, men du klarte akkurat å feste deg i veggen. Du klatra opp og du har samme valg igjen, men du hører at det er noen rett utenfor døra.";
+      document.getElementById("AlternativTextA").style.display = "none";
+      document.getElementById("overblikLiane").style.display = "none";
+
+      tide=tide-30-vekt;
+      document.getElementById("Tide").innerHTML = tide;
+
+
+      if (lydBak == 2) {
+       document.getElementById("AlternativTextA").innerHTML = "Du hører lyder bak døra som er bak deg.";
+      }
+
+      if (lydBak==6) {
+       lydBak=1;
+      }
+
+      if (tide<=0) {
+       document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+       dode();
+      }
+     }
+
+     if (lianerSjankse == 1) {
+      document.getElementById("lianeSolidVideo").load();
+      document.getElementById("lianeSolidVideo").style.display = "block";
+      document.getElementById("lianeSolidVideo").play();
+      document.getElementById("AlgaaRunt1").style.display = "none";
+      document.getElementById("AlbrukLianer").style.display = "none";
+      document.getElementById("senarioText").innerHTML = "Du kom deg over på andre siden med lianen.";
+      document.getElementById("AlternativTextA").style.display = "none";
+      document.getElementById("ValgText").style.display = "block";
+      document.getElementById("ValgText").innerHTML = "På den andre siden var det en dør som du gikk gjennom. Du gikk et lite stykke før du hørte en kjent stemme rope på hjelp.";
+      document.getElementById("overblikLiane").style.display = "none";
+      document.getElementById("AlternativTextB").style.display = "none";
+
+      tide=tide-2-vekt;
+      document.getElementById("Tide").innerHTML = tide;
+     }
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function lianeSolidVideo(){
+     document.getElementById("lianeSolidVideo").style.display = "none";
+     document.getElementById("HjelpStemeVideo").load();
+     document.getElementById("HjelpStemeVideo").style.display = "block";
+     document.getElementById("HjelpStemeVideo").play();
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function lianeRykerVideo(){
+     document.getElementById("lianeRykerVideo").style.display = "none";
+     if (lydBak!=3 && lydBak!=4) {
+      document.getElementById("overblikLiane").style.display = "block";
+      document.getElementById("AlbrukLianer").style.display = "block";
+      document.getElementById("AlgaaRunt1").style.display = "block";
+     }
+     if (lydBak ==3 || lydBak ==4) {
+      document.getElementById("AlternativTextB").style.display = "none";
+      document.getElementById("senarioText").style.display = "block";
+      document.getElementById("senarioText").innerHTML = "Lianen røyk, men du klarte å ta tak i noe å komme deg opp, men da du reiste deg opp sto det to karer foran deg som slo deg ned.";
+      dode();
+      BevistLos();
+     }
+
+     lydBak=lydBak+1;
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+
+    function AlgaaRunt1(){
+     document.getElementById("gooRunt1Video").load();
+     document.getElementById("gooRunt1Video").style.display = "block";
+     document.getElementById("gooRunt1Video").play();
+     document.getElementById("senarioText").innerHTML = "Det tok litt tid, men du kom deg over.";
+     document.getElementById("AlgaaRunt1").style.display = "none";
+     document.getElementById("AlbrukLianer").style.display = "none";
+     document.getElementById("overblikLiane").style.display = "none";
+     document.getElementById("HjelpStemeVideo").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+     lydBak=lydBak+1;
+
+     tide=tide-50-vekt;
+     document.getElementById("Tide").innerHTML = tide;
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function gooRunt1Video(){
+     document.getElementById("gooRunt1Video").style.display = "none";
+     document.getElementById("HjelpStemeVideo").load();
+     document.getElementById("HjelpStemeVideo").style.display = "block";
+     document.getElementById("HjelpStemeVideo").play();
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function HjelpStemeVideo(){
+     document.getElementById("ValgText").style.display = "block";
+     document.getElementById("ValgText").innerHTML = "På andre siden var det en dør som du gikk gjennom. Du gikk et lite stykke før du hørte en kjent stemme rope på hjelp.";
+     document.getElementById("AlternativTextA").style.display = "block";
+     document.getElementById("AlternativTextA").innerHTML = "Du kan prøve å hjelpe, men det det kan hende du trenger et verktøy først, eller så kan du velge å ikke ta sjansen å løpe videre.";
+     if (lydBak == 4) {
+      document.getElementById("AlternativTextB").style.display = "block";
+      document.getElementById("AlternativTextB").innerHTML = "De folka du hørte tidligere er kansje nærme nå.";
+     }
+     document.getElementById("AlLianeRoomRevers").style.display = "block";
+     document.getElementById("AlLopVidre").style.display = "block";
+     document.getElementById("AlHjelp").style.display = "block";
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function AlLianeRoomRevers(){
+     document.getElementById("ValgText").style.display = "none"
+     document.getElementById("AlLianeRoomRevers").style.display = "none";
+     document.getElementById("VinduValg1Video").style.display = "none";
+     document.getElementById("HjelpStemeVideo").style.display = "none";
+     document.getElementById("KlarteHjelpeVideo").style.display = "none";
+     document.getElementById("AlternativTextA").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+     document.getElementById("AlLopVidre").style.display = "none";
+     document.getElementById("AlHjelp").style.display = "none";
+     document.getElementById("AlHop").style.display = "none";
+     document.getElementById("AldobeltKoridor").style.display = "none";
+     document.getElementById("AlLianeRoomRevers").style.display = "none";
+
+     tide=tide-60-vekt;
+     document.getElementById("Tide").innerHTML = tide;
+
+
+     if (lydBak==3 && partner==0 || lydBak==4 && partner==0) {
+      document.getElementById("senarioText").style.display = "block";
+      document.getElementById("senarioText").innerHTML = "Du fulgte veien der den førte deg, men du møtte noen på veien.";
+      document.getElementById("Tide").style.display = "none";
+      lydBak=7;
+      ToFolk();
+     }
+     else {
+       document.getElementById("senarioText").style.display = "none";
+      if (partner==0) {
+       document.getElementById("LianeRoomReversVideo").load();
+       document.getElementById("LianeRoomReversVideo").style.display = "block";
+       document.getElementById("LianeRoomReversVideo").play();
+      }
+      if (partner==1) {
+       document.getElementById("LianeRoomRuntReversToVideo").load();
+       document.getElementById("LianeRoomRuntReversToVideo").style.display = "block";
+       document.getElementById("LianeRoomRuntReversToVideo").play();
+      }
+     }
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+
+    function LianeRoomReversVideo(){
+     document.getElementById("LianeRoomReversVideo").style.display = "none";
+     document.getElementById("LianeRoomRuntReversToVideo").style.display = "none";
+     if (lydBak==2) {
+      document.getElementById("senarioText").innerHTML = "Du løp rundt dammen, men da du åpna døra sto det to folk der som slo deg ned.";
+      dode();
+      BevistLos();
+     }
+     else {
+      koridore1Video();
+     }
+    }
+
+    function AlHjelp(){
+     lydBak=lydBak+1;
+     document.getElementById("AlLianeRoomRevers").style.display = "block";
+     document.getElementById("VinduValg1Video").style.display = "none";
+     document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+     document.getElementById("HjelpStemeVideo").style.display = "none";
+     document.getElementById("AlLopVidre").style.display = "none";
+     document.getElementById("AlHjelp").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+     document.getElementById("AlternativTextA").style.display = "none";
+     document.getElementById("AlHop").style.display = "none";
+     document.getElementById("AldobeltKoridor").style.display = "none";
+     document.getElementById("AlLianeRoomRevers").style.display = "none";
+     if (kuJern == true) {
+      document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+      document.getElementById("KlarteHjelpeVideo").load();
+      document.getElementById("KlarteHjelpeVideo").style.display = "block";
+      document.getElementById("KlarteHjelpeVideo").play();
+      document.getElementById("senarioText").innerHTML = "Du brukte litt tid, men du klarte å åpne døra med hjelp av kubeinet.";
+      partner=1;
+      lydBak=lydBak-1000;
+      tide=tide-20-vekt;
+      document.getElementById("Tide").innerHTML = tide;
+     }
+
+     if (kuJern == false) {
+      document.getElementById("KlarteIkkeHjelpeVideo").load();
+      document.getElementById("KlarteIkkeHjelpeVideo").style.display = "block";
+      document.getElementById("KlarteIkkeHjelpeVideo").play();
+      document.getElementById("senarioText").innerHTML = "Du bruke litt tid, men du greide ikke å åpne døra.";
+      document.getElementById("senarioText").style.display = "none";
+      tide=tide-30-vekt;
+      document.getElementById("Tide").innerHTML = tide;
+     }
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function KlarteIkkeHjelpeVideo(){
+     if (lydBak==5) {
+      document.getElementById("senarioText").innerHTML = "Imens du var fokusert på å hjelpe ble du angrepet bakfra.";
+      dode();
+      BevistLos();
+     }
+     if (lydBak!=5) {
+      HjelpStemeVideo();
+     }
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+
+    }
+
+    function LianeRoomRuntToVideo(){
+     document.getElementById("LianeRoomRuntToVideo").style.display = "none";
+     document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+     document.getElementById("KlarteHjelpeVideo").style.display = "block";
+     KlarteHjelpeVideo();
+    }
+
+    function KlarteHjelpeVideo(){
+     document.getElementById("ValgText").style.display = "none";
+     document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+     document.getElementById("AlHop").style.display = "block";
+     document.getElementById("AldobeltKoridor").style.display = "block";
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+    }
+
+    function AlLopVidre(){
+     hjelpeSteme=0;
+     document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+     document.getElementById("HjelpStemeVideo").style.display = "none";
+     document.getElementById("lopVidreVideo").load();
+     document.getElementById("lopVidreVideo").style.display = "block";
+     document.getElementById("lopVidreVideo").play();
+     document.getElementById("AlLopVidre").style.display = "none";
+     document.getElementById("AlHjelp").style.display = "none";
+     document.getElementById("ValgText").style.display = "none";
+     document.getElementById("senarioText").innerHTML = "Du løp videre uten å se deg tilbake.";
+     lydBak=lydBak+1;
+     if (lydBak==6) {
+      lydBak=1;
+     }
+     tide=tide-3-vekt;
+     document.getElementById("Tide").innerHTML = tide;
+
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function lopVidreVideo(){
+     document.getElementById("ValgText").style.display = "none";
+     document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+     document.getElementById("lopVidreVideo").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+     document.getElementById("VinduVideo").load();
+     document.getElementById("VinduVideo").style.display = "block";
+     document.getElementById("VinduVideo").play();
+    }
+
+    function VinduVideo(){
+      document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+      document.getElementById("VinduVideo").style.display = "none";
+      document.getElementById("AlternativTextA").innerHTML = "Det er et vindu foran deg som du muligens kan rømme ut av.";
+      document.getElementById("AlHop").style.display = "block";
+      document.getElementById("AldobeltKoridor").style.display = "block";
+      if (hjelpeSteme==1) {
+       document.getElementById("AlternativTextB").style.display = "block";
+       document.getElementById("AlternativTextB").innerHTML = "Du hører noen som roper på hjelp fra nærmeste dør.";
+       document.getElementById("AlHjelp").style.display = "block";
+       hjelpeSteme=0;
+      }
+      document.getElementById("VinduValg1Video").style.display = "block";
+      if (lydBak==6) {
+       lydBak=1;
+      }
+    }
+
+    function VinduValg1Video(){
+      document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+      document.getElementById("VinduValg1Video").style.display = "none";
+      document.getElementById("AlHop").style.display = "block";
+      document.getElementById("AldobeltKoridor").style.display = "block";
+      if (partner==0) {
+      document.getElementById("AlHjelp").style.display = "block";
+      }
+
+      if (lydBak==6) {
+       lydBak=1;
+      }
+    }
+
+    function AlHop(){
+     document.getElementById("AlLianeRoomRevers").style.display = "none";
+     document.getElementById("KlarteHjelpeVideo").style.display = "none";
+     document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+     document.getElementById("VinduValg1Video").style.display = "none";
+     document.getElementById("AlHjelp").style.display = "none";
+     document.getElementById("AlHop").style.display = "none";
+     document.getElementById("AldobeltKoridor").style.display = "none";
+
+     if (partner==0) {
+        document.getElementById("senarioText").innerHTML = "du hopa ut av vindu";
+       document.getElementById("HopVideo").load();
+       document.getElementById("HopVideo").style.display = "block";
+       document.getElementById("HopVideo").play();
+     }
+     if (partner==1) {
+        document.getElementById("senarioText").innerHTML = "Du og partnern din hoppa ut av vinduet.";
+       document.getElementById("HopToVideo").load();
+       document.getElementById("HopToVideo").style.display = "block";
+       document.getElementById("HopToVideo").play();
+     }
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+    }
+
+    function HopVideo(){
+      document.getElementById("senarioText").innerHTML = "Du klarte det.";
+      document.getElementById("HopVideo").style.display = "none";
+      document.getElementById("utAleneVideo").load();
+      document.getElementById("utAleneVideo").style.display = "block";
+      document.getElementById("utAleneVideo").play();
+    }
+
+    function HopToVideo(){
+      document.getElementById("AlternativTextA").style.display = "block";
+      document.getElementById("AlternativTextA").innerHTML = "Når du landa rullet du for å dempe støtet, men partnern din greide det ikke og ble skadet.";
+      document.getElementById("AlternativTextB").style.display = "block";
+      document.getElementById("AlternativTextB").innerHTML = "Vil du hjelpe eller stikke av alene?";
+      document.getElementById("AlHopHjelp").style.display = "block";
+      document.getElementById("AlHopStik").style.display = "block";
+
+      if (lydBak==6) {
+       lydBak=1;
+      }
+    }
+
+    function AlHopHjelp(){
+     document.getElementById("senarioText").style.display = "block";
+     document.getElementById("senarioText").innerHTML = "Du gikk bort for å hjelpe, men akkurat når du skulle hjelpe parneren din kom det en piano fra himmelen og knuste dere begge.";
+     document.getElementById("ValgText").style.display = "none";
+     document.getElementById("AlternativTextA").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+     document.getElementById("HopToVideo").style.display = "none";
+     document.getElementById("AlHopHjelp").style.display = "none";
+     document.getElementById("AlHopStik").style.display = "none";
+     document.getElementById("HopHjelpVideo").load();
+     document.getElementById("HopHjelpVideo").style.display = "block";
+     document.getElementById("HopHjelpVideo").play();
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+    }
+
+    function HopHjelpVideo(){
+      document.getElementById("HopToVideo").style.display = "none";
+      document.getElementById("HopHjelpVideo").style.display = "none";
+      document.getElementById("GameOverVideo").load();
+      document.getElementById("GameOverVideo").style.display = "block";
+      document.getElementById("GameOverVideo").play();
+    }
+
+    function AlHopStik(){
+     document.getElementById("senarioText").style.display = "block";
+     document.getElementById("senarioText").innerHTML = "Du stakk av fra parneren din uten å se deg tilbake.";
+     document.getElementById("ValgText").style.display = "none";
+     document.getElementById("AlternativTextA").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+     document.getElementById("AlHopHjelp").style.display = "none";
+     document.getElementById("AlHopStik").style.display = "none";
+     document.getElementById("HopStikVideo").load();
+     document.getElementById("HopStikVideo").style.display = "block";
+     document.getElementById("HopStikVideo").play();
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+    }
+
+    function HopStikVideo(){
+      document.getElementById("AlternativTextA").style.display = "none";
+      document.getElementById("AlternativTextB").style.display = "none";
+      document.getElementById("HopStikVideo").style.display = "none";
+      document.getElementById("utAleneVideo").load();
+      document.getElementById("utAleneVideo").style.display = "block";
+      document.getElementById("utAleneVideo").play();
+    }
+
+    function AldobeltKoridor(){
+     document.getElementById("ValgText").style.display = "none";
+     document.getElementById("AlLianeRoomRevers").style.display = "none";
+     document.getElementById("VinduValg1Video").style.display = "none";
+     document.getElementById("AlHjelp").style.display = "none";
+     document.getElementById("AlHop").style.display = "none";
+     document.getElementById("AldobeltKoridor").style.display = "none";
+     if (partner==0) {
+      document.getElementById("senarioText").innerHTML = "Du gikk rundt svingen. Der så du en person løp mot deg, uten og tenke dukka du ned å gjorde deg selv til en ball.";
+      document.getElementById("Dobeltjenger2Video").load();
+      document.getElementById("Dobeltjenger2Video").style.display = "block";
+      document.getElementById("Dobeltjenger2Video").play();
+     }
+     if (partner==1) {
+      document.getElementById("senarioText").innerHTML = "Du og parnern din løp rundt svingen. Der så dere en person som snudde seg og løp.";
+      document.getElementById("KlarteHjelpeVideo").style.display = "none";
+      document.getElementById("IkkeVinduVideo").load();
+      document.getElementById("IkkeVinduVideo").style.display = "block";
+      document.getElementById("IkkeVinduVideo").play();
+     }
+     lydBak=lydBak+1;
+
+     if (lydBak==6) {
+      lydBak=1;
+     }
+
+     tide=tide-4;
+     document.getElementById("AlternativTextC").innerHTML = tide;
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+
+    function Dobeltjenger2Video(){
+     document.getElementById("Dobeltjenger2Video").style.display = "none";
+     document.getElementById("IkkeVinduVideo").style.display = "none";
+     KoteKoridore();
+
+    }
+
+    function BevistLos(){
+     partner=0;
+     document.getElementById("senarioText").style.display = "block";
+
+     document.getElementById("overblikKoridor1").style.display = "none";
+     document.getElementById("overblikRoom1").style.display = "none";
+     document.getElementById("overblikToFolk").style.display = "none";
+     document.getElementById("overblikKote").style.display = "none";
+     document.getElementById("overblikKoridor").style.display = "none";
+
+     document.getElementById("AlHøyere1").style.display = "none";
+     document.getElementById("AlVenstere1").style.display = "none";
+     document.getElementById("AlbrukLianer").style.display = "none";
+     document.getElementById("AlgaaRunt1").style.display = "none";
+     document.getElementById("AlAngrip1").style.display = "none";
+     document.getElementById("AlLoopTilbake").style.display = "none";
+     document.getElementById("AlLoopGjenom").style.display = "none";
+     document.getElementById("AlSamtale").style.display = "none";
+     document.getElementById("AlDis").style.display = "none";
+     document.getElementById("AlForje").style.display = "none";
+     document.getElementById("AlforsteRoom").style.display = "none";
+     document.getElementById("Alfremover").style.display = "none";
+
+     document.getElementById("ValgText").style.display = "none";
+     document.getElementById("AlternativTextA").style.display = "none";
+     document.getElementById("AlternativTextB").style.display = "none";
+
+     document.getElementById("StartRoomVideo").style.display = "none";
+     document.getElementById("koridore1Video").style.display = "none";
+     document.getElementById("bakSving1Video").style.display = "none";
+     document.getElementById("bakDoora1Video").style.display = "none";
+     document.getElementById("lianeRykerVideo").style.display = "none";
+     document.getElementById("lianeSolidVideo").style.display = "none";
+     document.getElementById("gooRunt1Video").style.display = "none";
+     document.getElementById("provNormalSamtaleVideo").style.display = "none";
+     document.getElementById("Dis1Video").style.display = "none";
+     document.getElementById("LoopAngripVideo").style.display = "none";
+     document.getElementById("LoopTilbakeVideo").style.display = "none";
+     document.getElementById("HjelpStemeVideo").style.display = "none";
+
+     document.getElementById("HjelpStemeVideo").style.display = "none";
+     document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+     document.getElementById("KlarteHjelpeVideo").style.display = "none";
+     document.getElementById("overblikKoridor2Video").style.display = "none";
+     document.getElementById("koteGoInVideo").style.display = "none";
+     document.getElementById("UtKoteVideo").style.display = "none";
+     document.getElementById("VinduValg1Video").style.display = "none";
+     document.getElementById("VinduValg2Video").style.display = "none";
+     document.getElementById("lopVidreVideo").style.display = "none";
+     document.getElementById("VinduToVideo").style.display = "none";
+     document.getElementById("gotilKoridorVideo").style.display = "none";
+     document.getElementById("IkkeKubeinVideo").style.display = "none";
+     document.getElementById("Hoyere2Video").style.display = "none";
+     document.getElementById("Venstere2Video").style.display = "none";
+     document.getElementById("Dobeltjenger1Video").style.display = "none";
+     document.getElementById("Dobeltjenger2Video").style.display = "none";
+     document.getElementById("HopToVideo").style.display = "none";
+     document.getElementById("HopVideo").style.display = "none";
+     document.getElementById("HopHjelpVideo").style.display = "none";
+     document.getElementById("HopStikVideo").style.display = "none";
+     document.getElementById("koridoreKoteNedToVideo").style.display = "none";
+     document.getElementById("koridoreKoteToVideo").style.display = "none";
+     document.getElementById("koridoreKoteToHoyereVideo").style.display = "none";
+     document.getElementById("koridoreKoteToVenstereVideo").style.display = "none";
+     document.getElementById("IkkeVinduVideo").style.display = "none";
+     document.getElementById("VinduVideo").style.display = "none";
+     document.getElementById("VinduTo2Video").style.display = "none";
+     document.getElementById("LianeRoomRuntToVideo").style.display = "none";
+     document.getElementById("LianeRoomReversVideo").style.display = "none";
+     document.getElementById("LianeRoomRuntReversToVideo").style.display = "none";
+     document.getElementById("venstereTo1Video").style.display = "none";
+     document.getElementById("hoyereTo1Video").style.display = "none";
+     hjelpeSteme=0;
+
+
+     tide=tide-150-vekt;
+     document.getElementById("TilbakeTilStart").style.display = "block";
+
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+    function TilbakeTilStart(){
+     document.getElementById("TilbakeTilStart").style.display = "none";
+     document.getElementById("StartRoomVideo").load();
+     document.getElementById("StartRoomVideo").play();
+     document.getElementById("ValgText").innerHTML = "Du kan velge mellom å prøve og åpne døra eller vente og se hva som skjer. Hva vil du gjøre?";
+     document.getElementById("AlternativTextA").innerHTML = toFolk;
+     document.getElementById("StartRoomVideo").style.display = "block";
+     document.getElementById("senarioText").innerHTML = "Du våkner opp i et kaldt hvitt rom. Du ser deg litt rundt før du oppdager en klokke på hånden din med en nedteller."
+     document.getElementById("Tide").style.display = "block";
+     document.getElementById("Tide").innerHTML = tide;
+     document.getElementById("dodeVideo").style.display = "none";
+
+     if (tide<=0) {
+      document.getElementById("senarioText").innerHTML = "Du ble tom for tid og falt på bakken.";
+      dode();
+     }
+    }
+
+
+    function dode(){
+     document.getElementById("dodeVideo").load();
+     document.getElementById("dodeVideo").style.display = "block";
+     document.getElementById("dodeVideo").play();
+     if (tide<=0) {
+       document.getElementById("overblikKoridor1").style.display = "none";
+       document.getElementById("overblikRoom1").style.display = "none";
+       document.getElementById("overblikToFolk").style.display = "none";
+       document.getElementById("overblikKote").style.display = "none";
+       document.getElementById("overblikKoridor").style.display = "none";
+
+       document.getElementById("AlHøyere1").style.display = "none";
+       document.getElementById("AlVenstere1").style.display = "none";
+       document.getElementById("AlbrukLianer").style.display = "none";
+       document.getElementById("AlgaaRunt1").style.display = "none";
+       document.getElementById("AlAngrip1").style.display = "none";
+       document.getElementById("AlLoopTilbake").style.display = "none";
+       document.getElementById("AlLoopGjenom").style.display = "none";
+       document.getElementById("AlSamtale").style.display = "none";
+       document.getElementById("AlDis").style.display = "none";
+       document.getElementById("AlForje").style.display = "none";
+       document.getElementById("AlforsteRoom").style.display = "none";
+       document.getElementById("Alfremover").style.display = "none";
+
+       document.getElementById("ValgText").style.display = "none";
+       document.getElementById("AlternativTextA").style.display = "none";
+       document.getElementById("AlternativTextB").style.display = "none";
+
+       document.getElementById("StartRoomVideo").style.display = "none";
+       document.getElementById("koridore1Video").style.display = "none";
+       document.getElementById("bakSving1Video").style.display = "none";
+       document.getElementById("bakDoora1Video").style.display = "none";
+       document.getElementById("lianeRykerVideo").style.display = "none";
+       document.getElementById("lianeSolidVideo").style.display = "none";
+       document.getElementById("gooRunt1Video").style.display = "none";
+       document.getElementById("provNormalSamtaleVideo").style.display = "none";
+       document.getElementById("Dis1Video").style.display = "none";
+       document.getElementById("LoopAngripVideo").style.display = "none";
+       document.getElementById("LoopTilbakeVideo").style.display = "none";
+       document.getElementById("HjelpStemeVideo").style.display = "none";
+
+       document.getElementById("HjelpStemeVideo").style.display = "none";
+       document.getElementById("KlarteIkkeHjelpeVideo").style.display = "none";
+       document.getElementById("KlarteHjelpeVideo").style.display = "none";
+       document.getElementById("overblikKoridor2Video").style.display = "none";
+       document.getElementById("koteGoInVideo").style.display = "none";
+       document.getElementById("UtKoteVideo").style.display = "none";
+       document.getElementById("VinduValg1Video").style.display = "none";
+       document.getElementById("VinduValg2Video").style.display = "none";
+       document.getElementById("lopVidreVideo").style.display = "none";
+       document.getElementById("VinduToVideo").style.display = "none";
+       document.getElementById("gotilKoridorVideo").style.display = "none";
+       document.getElementById("IkkeKubeinVideo").style.display = "none";
+       document.getElementById("Hoyere2Video").style.display = "none";
+       document.getElementById("Venstere2Video").style.display = "none";
+       document.getElementById("Dobeltjenger1Video").style.display = "none";
+       document.getElementById("Dobeltjenger2Video").style.display = "none";
+       document.getElementById("HopToVideo").style.display = "none";
+       document.getElementById("HopVideo").style.display = "none";
+       document.getElementById("HopHjelpVideo").style.display = "none";
+       document.getElementById("HopStikVideo").style.display = "none";
+       document.getElementById("koridoreKoteNedToVideo").style.display = "none";
+       document.getElementById("koridoreKoteToVideo").style.display = "none";
+       document.getElementById("koridoreKoteToHoyereVideo").style.display = "none";
+       document.getElementById("koridoreKoteToVenstereVideo").style.display = "none";
+       document.getElementById("IkkeVinduVideo").style.display = "none";
+       document.getElementById("VinduVideo").style.display = "none";
+       document.getElementById("VinduTo2Video").style.display = "none";
+       document.getElementById("LianeRoomRuntToVideo").style.display = "none";
+       document.getElementById("LianeRoomReversVideo").style.display = "none";
+       document.getElementById("LianeRoomRuntReversToVideo").style.display = "none";
+       document.getElementById("venstereTo1Video").style.display = "none";
+       document.getElementById("hoyereTo1Video").style.display = "none";
+     }
+    }
+
+   </script>
+  </body>
+</html>
